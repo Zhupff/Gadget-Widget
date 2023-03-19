@@ -1,0 +1,22 @@
+import zhupff.gadget.gradle.Ver
+
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+}
+
+android {
+    compileSdk Ver.Project.compileSdkVersion as int
+    defaultConfig {
+        applicationId "zhupff.gadget.widget"
+        minSdk Ver.Project.minSdkVersion as int
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${Ver.Android.appCompat}"
+}
