@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    dependencies {
-        classpath "com.github.Zhupff:Gadget-Gradle:10fd86ffd9"
+    apply from: "https://raw.githubusercontent.com/Zhupff/Gadget-Gradle/script/buildscript.gradle"
+    GadgetScript.compose("be3db940c9") {
     }
 }
 plugins {

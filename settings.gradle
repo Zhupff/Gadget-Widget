@@ -5,7 +5,6 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
 }
 dependencyResolutionManagement {
@@ -13,11 +12,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "Gadget-Widget"
-include ":app"
+include ":widget"
 
 if (System.getenv("JITPACK") != "true") {
     include ":app"
