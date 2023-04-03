@@ -8,7 +8,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
@@ -16,6 +16,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Gadget-Widget"
 include ":widget"
+include ":gradle"
 
 if (System.getenv("JITPACK") != "true") {
     include ":app"
