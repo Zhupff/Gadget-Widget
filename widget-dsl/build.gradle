@@ -1,17 +1,27 @@
 plugins {
-    id "com.android.application"
+    id "com.android.library"
     id "org.jetbrains.kotlin.android"
+    id "org.jetbrains.kotlin.kapt"
+    id "com.google.devtools.ksp"
+    id "zhupff.gadget.gradle.JitpackPublish"
 }
 
 android {
     compileSdk GadgetVer.compileSdk
     defaultConfig {
-        applicationId "zhupff.gadget.widget"
         minSdk GadgetVer.minSdk
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    kotlin {
+        sourceSets.main {
+            kotlin.srcDirs += "build/generated/ksp/main/kotlin"
+        }
     }
 }
 
@@ -19,5 +29,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${GadgetVer.android.appCompat}"
     implementation "com.google.android.material:material:${GadgetVer.android.material}"
     implementation project(":widget")
-    implementation project(":widget-dsl")
+    kapt project(":compile")
 }

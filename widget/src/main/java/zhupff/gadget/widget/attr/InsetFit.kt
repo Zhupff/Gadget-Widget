@@ -5,7 +5,7 @@ import android.view.View
 import android.view.WindowInsets
 import androidx.annotation.StyleableRes
 import androidx.core.view.WindowInsetsCompat
-import zhupff.gadget.widget.dsl.DslScope
+import zhupff.gadget.widget.WidgetDslScope
 
 private const val L = 0
 private const val T = 1
@@ -17,7 +17,7 @@ interface IInsetFit {
 }
 
 inline fun IInsetFit.insetFit(
-    block: (@DslScope InsetFit).() -> Unit
+    block: (@WidgetDslScope InsetFit).() -> Unit
 ) {
     insetFit.apply(block).invalidate()
 }

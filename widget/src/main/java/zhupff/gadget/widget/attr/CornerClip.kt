@@ -6,7 +6,7 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.StyleableRes
-import zhupff.gadget.widget.dsl.DslScope
+import zhupff.gadget.widget.WidgetDslScope
 
 private const val TLX = 0
 private const val TLY = 1
@@ -22,7 +22,7 @@ interface ICornerClip {
 }
 
 inline fun ICornerClip.cornerClip(
-    block: (@DslScope CornerClip).() -> Unit
+    block: (@WidgetDslScope CornerClip).() -> Unit
 ) {
     cornerClip.apply(block).invalidate()
 }

@@ -1,0 +1,9 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm"
+    id "zhupff.gadget.gradle.JitpackPublish"
+}
+
+dependencies {
+    implementation "com.google.devtools.ksp:symbol-processing-api:${GadgetVer.ksp}"
+    implementation "com.squareup:kotlinpoet-ksp:${GadgetVer.squareUp.kotlinPoet}"
+}

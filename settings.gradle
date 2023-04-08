@@ -16,6 +16,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Gadget-Widget"
 include ":widget"
+include ":widget-dsl"
+include ":compile"
 include ":gradle"
 
 if (System.getenv("JITPACK") != "true") {
