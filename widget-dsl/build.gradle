@@ -22,6 +22,12 @@ android {
         sourceSets.main {
             kotlin.srcDirs += "build/generated/ksp/main/kotlin"
         }
+        sourceSets.debug {
+            kotlin.srcDirs += "build/generated/ksp/debug/kotlin"
+        }
+        sourceSets.release {
+            kotlin.srcDirs += "build/generated/ksp/release/kotlin"
+        }
     }
 }
 
@@ -30,4 +36,5 @@ dependencies {
     implementation "com.google.android.material:material:${GadgetVer.android.material}"
     implementation project(":widget")
     kapt project(":compile")
+//    ksp project(":compile")
 }
